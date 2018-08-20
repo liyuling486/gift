@@ -1,0 +1,17 @@
+div,ul,li,dl,dt,dd{margin: 0;padding: 0;}
+img{width: 170px;height: 140px;margin: 10px;}
+#food{width: 600px;height: 600px;position: relative;}
+#close{width: 192px;height: 202px;position: absolute;left: 192px;top: 202px;background:rgba(69, 172, 175, 0.4);z-index: 1;display: none;}
+li{list-style: none;height: 200px;width: 190px;float:left;border: 2px solid #000;margin: -1px;}
+dd{text-align: center;height: 30px;font: 20px/30px '华文行楷';}
+.nine{position: absolute;left: 192px;top: 202px;}
+li:nth-child(4){position: absolute;left: 384px;top: 202px;}
+li:nth-child(5){position: absolute;left: 384px;top: 404px;}
+li:nth-child(6){position: absolute;left: 192px;top: 404px;}
+li:nth-child(7){position: absolute;left: 0px;top: 404px;}
+li:nth-child(8){position: absolute;left: 0px;top: 202px;}
+
+
+
+
+
