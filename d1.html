@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<h1>小猴奖</h1>
+<div id="food">
+    <div id="close"></div>
+    <ul>
+        <li>
+            <dl>
+                <dt><img src="images/1.jpg" /></dt>
+                <dd>一等奖</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><img src="images/2.jpg" /></dt>
+                <dd>二等奖</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><img src="images/3.jpg" /></dt>
+                <dd>三等奖</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><img src="images/4.jpg" /></dt>
+                <dd>四等奖</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><img src="images/5.jpg" /></dt>
+                <dd>五等奖</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><img src="images/6.jpg" /></dt>
+                <dd>六等奖</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><img src="images/7.jpg" /></dt>
+                <dd>七等奖</dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><img src="images/8.jpg" /></dt>
+                <dd>八等奖</dd>
+            </dl>
+        </li>
+        <li class="nine">
+            <dl class="mid">
+                <dt class="middle" id="btn"><img src="images/9.jpg" id="pic"/></dt>
+                <dd>开　奖</dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<script>
+//初始化变量
+var oLi = document.getElementsByTagName('li'),
+    oBtn = document.getElementById('btn'),
+    oPic = document.getElementById('pic'),
+    num = i = t = 0;    //计数器(顺时针)
+
+oBtn.onclick = function(){
+    oPic.style.transform = 'scale(0.6)';
+    oPic.style.transition = '2s';
+    view(); //中文(视图)    动画
+
+}
+
+function view(){
+    num = parseInt(Math.random()*oLi.length) + 20;   //确定顺时针循环li个数(固定)
+    console.log('固定次数: ' + num)
+    if (i < num){   //i: 已完成的循环次数(变化的)
+        i++;    //每循环完一个li标签 + 1
+
+        console.log('动态次数: ' + i)
+        setTimeout(view,200);
+    }else{
+        i = 0;
+    }
+
+// 动画 t 顺时针循环中每个li标签的下标
+    if(t < oLi.length - 1){ //先清除所有,在设置一个
+        for(var j = 0;j < oLi.length - 1;j++){
+            oLi[j].style.border = '';
+            oLi[j].style.background = '';
+        }
+        oLi[t].style.border = '2px solid #ddd'
+        oLi[t].style.background = 'rgba(69, 172, 175, 0.4)';
+        t++;
+    }else{
+        t = 0;
+    }
+}
+
+
+</script>
+
+</body>
+</html>
