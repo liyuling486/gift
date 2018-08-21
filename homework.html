@@ -26,38 +26,45 @@ var oPic = document.getElementById('pic'),
     oJia = document.getElementById('jiang'),
     n = 0;
 
+var b = true;
 oJia.onclick = function(){
-    view();
+    if(b){
+        oPic.style.transform="rotate(0deg)";
+        b = !b;
+        view();
+    }
 }
 
 function view(){
-    n = parseFloat(Math.random()*3600) + 720;   //旋转度数
-        var num = 0;
+    n = Math.floor(Math.random()*3600) + 720;   //旋转度数
+    var num = 0;
     setTimeout(function(){
         oPic.style.transform = "rotate(" + n + "deg)";
         oPic.style.transition = '2s';  //旋转  动画
-        // var a = true;
-        // a = !a;
-        // if(a = false){
-        //     num = n % 360;
-        //     if(num <= 51.4 * 1){
-        //     alert("4999元");
-        //     }else if(num <= 51.4 * 2){
-        //     alert("条50元");
-        //     }else if(num <= 51.4 * 3){
-        //     alert("10元");
-        //     }else if(num <= 51.4 * 4){
-        //     alert("5元");
-        //     }else if(num <= 51.4 * 5){
-        //     alert("免息服务");
-        //     }else if(num <= 51.4 * 6){
-        //     alert("提交白金");
-        //     }else if(num <= 51.4 * 7){
-        //     alert("未中奖");
-        //     }
-        // }
     }
+    
     ,500);    //定时器
+    function a(){
+        num = n % 360;
+        if(num <= 51.4 * 1){
+        alert("免单4999元");
+        }else if(num <= 51.4 * 2){
+        alert("免单50元");
+        }else if(num <= 51.4 * 3){
+        alert("免单10元");
+        }else if(num <= 51.4 * 4){
+        alert("免单5元");
+        }else if(num <= 51.4 * 5){
+        alert("免息服务");
+        }else if(num <= 51.4 * 6){
+        alert("提高白条额度");
+        }else if(num <= 51.4 * 7){
+        alert("未中奖");
+        }
+        location.reload();
+    }  
+    setTimeout(a,3000)  //弹出定时
+
 }
 
 
