@@ -1,6 +1,8 @@
-div,ul,li,dl,dt,dd{margin: 0;padding: 0;}
+body,div,ul,li,dl,dt,dd{margin: 0;padding: 0;}
+body{width: 100%;}
+h1{margin: 0 auto;width: 100px;line-height: 60px;}
 img{width: 170px;height: 140px;margin: 10px;}
-#food{width: 600px;height: 600px;position: relative;}
+#food{width: 600px;height: 600px;position: relative;margin: 0 auto;}
 #close{width: 192px;height: 202px;position: absolute;left: 192px;top: 202px;background:rgba(69, 172, 175, 0.4);z-index: 1;display: none;}
 li{list-style: none;height: 200px;width: 190px;float:left;border: 2px solid #000;margin: -1px;}
 dd{text-align: center;height: 30px;font: 20px/30px '华文行楷';}

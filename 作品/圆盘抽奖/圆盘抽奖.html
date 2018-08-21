@@ -10,7 +10,7 @@ body,div{margin: 0;padding: 0;}
 body{width: 100%;}
 #box{position: relative;margin: 0 auto;width: 650px;height: 600px;}
 #jiang{position: absolute;left: 250px;top: 156px;}
-#pic{position: absolute;left: 118px;top: 60px;}
+#pic{position: absolute;left: 118px;top: 60px;transition: 2s;}
 
 </style>
 </head>
@@ -40,7 +40,7 @@ function view(){
     var num = 0;
     setTimeout(function(){
         oPic.style.transform = "rotate(" + n + "deg)";
-        oPic.style.transition = '2s';  //旋转  动画
+        // oPic.style.transition = '2s';  //旋转  动画
     }
     
     ,500);    //定时器
