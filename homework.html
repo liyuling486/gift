@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>homework</title>
+<style>
+body,div{margin: 0;padding: 0;}
+body{width: 100%;}
+#box{position: relative;margin: 0 auto;width: 650px;height: 600px;}
+#jiang{position: absolute;left: 250px;top: 156px;}
+#pic{position: absolute;left: 118px;top: 60px;}
+
+</style>
+</head>
+<body>
+<div id="box">
+    <img src="images/bg.jpg" id="bg"/>
+    <img src="images/pic.png" id="pic"/>
+    <img src="images/jiang.png" id="jiang"/>
+</div>
+
+<script>
+var oPic = document.getElementById('pic'),
+    oJia = document.getElementById('jiang'),
+    n = 0;
+
+oJia.onclick = function(){
+    view();
+}
+
+function view(){
+    n = parseFloat(Math.random()*3600) + 720;   //旋转度数
+        var num = 0;
+    setTimeout(function(){
+        oPic.style.transform = "rotate(" + n + "deg)";
+        oPic.style.transition = '2s';  //旋转  动画
+        var a = true;
+        // a = !a;
+        // if(a = false){
+        //     num = n % 360;
+        //     if(num <= 51.4 * 1){
+        //     alert("4999元");
+        //     }else if(num <= 51.4 * 2){
+        //     alert("条50元");
+        //     }else if(num <= 51.4 * 3){
+        //     alert("10元");
+        //     }else if(num <= 51.4 * 4){
+        //     alert("5元");
+        //     }else if(num <= 51.4 * 5){
+        //     alert("免息服务");
+        //     }else if(num <= 51.4 * 6){
+        //     alert("提交白金");
+        //     }else if(num <= 51.4 * 7){
+        //     alert("未中奖");
+        //     }
+        }
+    }
+    ,500);    //定时器
+}
+
+
+
+
+</script>
+
+</body>
+</html>
