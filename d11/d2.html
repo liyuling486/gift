@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象</title>
+</head>
+<body>
+<script>
+// javascript中的一切都是对象object
+// 下列类型使用typeof验证时那都是object(fn除外), 可使用 constructor来查看类型
+// num.constructor
+// 下列为: 某一类的变量
+// 使用对象的方式创建变量(直接量)
+var num = new Number(1);
+var str = new String('aaa');
+var bool = new Boolean(true);
+var arr = new Array(1,2,3);
+var obj = new Object({name:'li'});
+var fn = new Function(
+    'name',
+    'alert("hello  " + name)'
+);
+fn('alice');
+            // num
+            // Number {1}
+
+            // str
+            // String {"aaa"}
+
+            //bool
+            // Boolean {false}
+
+            // arr
+            //() [1,2,3]
+
+            // obj
+            // {}
+
+            // fn
+            // ƒ anonymous(
+            // ) {
+
+            // }
+
+
+</script>
+
+
+
+
+</body>
+</html>
